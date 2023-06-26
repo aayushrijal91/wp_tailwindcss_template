@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    border: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+@function imgUrl($file, $path: "background"){
+@return url("../images/" + $path + "/" + $file) no-repeat;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    @apply font-baukasten p-0 m-0 overflow-x-hidden;
+}
+
+.container {
+    max-width: 1300px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+// a {
+//     text-decoration: none;
+
+//     &:hover {
+//         text-decoration: none;
+//     }
+// }
+
+#return-to-top {
+    @apply bg-grey hover:bg-dark w-[50px] h-[50px] right-[55px] bottom-[95px] block rounded-full transition-all duration-100 ease-linear fixed hidden z-10 drop-shadow-2xl;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #022444;
+}
